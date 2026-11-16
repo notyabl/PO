@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dingo — бронирование отелей</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo"><span class="logo__mark">D</span>Dingo</a>
+      <nav class="nav">
+        <a href="#results">Отели</a>
+        <a href="#">Направления</a>
+        <a href="#">Помощь</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="hero__badge">🔥 Отели и апартаменты — в одном поиске</span>
+      <h1>Найдите отель, в который<br />захочется <em>вернуться</em></h1>
+      <p>Сравниваем предложения Ostrovok и Суточно.ру. Бронирование — на сайте источника, без комиссий Dingo.</p>
+
+      <form class="search" id="searchForm" autocomplete="off">
+        <div class="search__field">
+          <label for="cityInput">Направление</label>
+          <input id="cityInput" list="cities" placeholder="Куда едем?" />
+          <datalist id="cities">
+            <option value="Москва"></option>
+            <option value="Санкт-Петербург"></option>
+            <option value="Казань"></option>
+            <option value="Сочи"></option>
+            <option value="Ялта"></option>
+            <option value="Калининград"></option>
+          </datalist>
+        </div>
+        <div class="search__field">
+          <label for="checkin">Заезд</label>
+          <input type="date" id="checkin" />
+        </div>
+        <div class="search__field">
+          <label for="checkout">Выезд</label>
+          <input type="date" id="checkout" />
+        </div>
+        <div class="search__field">
+          <label for="guests">Гости</label>
+          <select id="guests">
+            <option>1 гость</option>
+            <option selected>2 гостя</option>
+            <option>3 гостя</option>
+            <option>4 гостя</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary">Найти отель</button>
+      </form>
+    </div>
+  </section>
+
+  <main class="container layout">
+
+    <aside class="filters">
+      <div class="filters__head">
+        <h2>Фильтры</h2>
+        <button class="link-btn" id="resetBtn" type="button">Сбросить</button>
+      </div>
+
+      <div class="filter">
+        <h3>Цена за ночь</h3>
+        <input class="range" type="range" id="priceRange" min="1000" max="30000" step="500" value="30000" />
+        <div class="range-labels">
+          <span>1 000 ₽</span>
+          <b id="priceValue">Любая</b>
+        </div>
+      </div>
+
+      <div class="filter">
+        <h3>Звёздность</h3>
+        <label class="check"><input type="checkbox" data-stars="5" /><span>5 звёзд</span></label>
+        <label class="check"><input type="checkbox" data-stars="4" /><span>4 звезды</span></label>
+        <label class="check"><input type="checkbox" data-stars="3" /><span>3 звезды</span></label>
+      </div>
+
+      <div class="filter">
+        <h3>Рейтинг гостей</h3>
+        <div class="pills">
+          <button type="button" class="pill is-active" data-rating="0">Любой</button>
+          <button type="button" class="pill" data-rating="8">8+</button>
+          <button type="button" class="pill" data-rating="9">9+</button>
+        </div>
+      </div>
+
+      <div class="filter">
+        <h3>Удобства</h3>
+        <label class="check"><input type="checkbox" data-amenity="wifi" /><span>Wi-Fi</span></label>
+        <label class="check"><input type="checkbox" data-amenity="breakfast" /><span>Завтрак</span></label>
+        <label class="check"><input type="checkbox" data-amenity="pool" /><span>Бассейн</span></label>
+        <label class="check"><input type="checkbox" data-amenity="spa" /><span>Спа-центр</span></label>
+        <label class="check"><input type="checkbox" data-amenity="parking" /><span>Парковка</span></label>
+        <label class="check"><input type="checkbox" data-amenity="gym" /><span>Фитнес-зал</span></label>
+      </div>
+
+      <div class="filter">
+        <h3>Тип размещения</h3>
+        <label class="check"><input type="checkbox" data-type="hotel" /><span>Отель</span></label>
+        <label class="check"><input type="checkbox" data-type="apart" /><span>Апартаменты</span></label>
+        <label class="check"><input type="checkbox" data-type="villa" /><span>Вилла</span></label>
+        <label class="check"><input type="checkbox" data-type="guest" /><span>Гостевой дом</span></label>
+      </div>
+    </aside>
+
+    <section class="results" id="results">
+      <div class="results__head">
+        <div class="results__count" id="resultsCount">Загрузка…</div>
+        <div class="sort">
+          <select id="sort">
+            <option value="popular">Сначала популярные</option>
+            <option value="price-asc">Сначала дешёвые</option>
+            <option value="price-desc">Сначала дорогие</option>
+            <option value="rating">По рейтингу</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        Dingo — метапоисковик. Мы не принимаем оплату и не оформляем брони:
+        по кнопке «Забронировать» вы переходите на Ostrovok или Суточно.ру и завершаете бронирование там.
+      </p>
+
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Загружаем отели…</p>
+      </div>
+
+      <div class="hotels" id="hotels"></div>
+
+      <div class="empty" id="empty">
+        <div class="empty__icon">🌵</div>
+        <h3>Ничего не нашлось</h3>
+        <p>Попробуйте изменить фильтры или выбрать другой город.</p>
+        <button class="btn btn--primary" id="emptyResetBtn" type="button">Сбросить фильтры</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <a href="#" class="logo"><span class="logo__mark">D</span>Dingo</a>
+          <p class="footer__text">Метапоиск отелей и апартаментов. Бронирование — на стороне источника.</p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h4>Сервис</h4>
+            <a href="#">Отели</a><a href="#">Направления</a>
+          </div>
+          <div>
+            <h4>Помощь</h4>
+            <a href="#">Поддержка</a><a href="#">Вопросы и ответы</a>
+          </div>
+          <div>
+            <h4>Компания</h4>
+            <a href="#">О нас</a><a href="#">Контакты</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">© 2024 Dingo. Учебный демо-проект.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "source": "sutochno",
+    "name": "Двухместный номер с 1 кроватью люкс",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-1.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1646529",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 2,
+    "source": "sutochno",
+    "name": "Двухместный номер с 1 кроватью студия",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-2.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/2163290",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 3,
+    "source": "sutochno",
+    "name": "Квартира Апарт люкс в двух шагах от Кремля",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "https://sutochno.ru/doc/i/search/flash.svg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1550853",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 4,
+    "source": "sutochno",
+    "name": "Двухместный номер с 1 кроватью люкс с сауной",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-4.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1646536",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 5,
+    "source": "sutochno",
+    "name": "Двухместный номер с 2 отдельными кроватями супериор",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "https://sutochno.ru/doc/i/search/stars.svg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1827734",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 6,
+    "source": "sutochno",
+    "name": "Трёхместный номер стандарт",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-6.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1646521",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 7,
+    "source": "sutochno",
+    "name": "Студио",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-7.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1805198",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 8,
+    "source": "sutochno",
+    "name": "Стильная студия на двоих на метро Прокшино в новом ЖК",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-8.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/2131932",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 9,
+    "source": "sutochno",
+    "name": "Двухместный номер с 1 кроватью стандарт",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-9.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/1805212",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  },
+  {
+    "id": 10,
+    "source": "sutochno",
+    "name": "Апартаменты Роскошные апартаменты с панорамой на Москва-Сити",
+    "city": "Москва",
+    "district": "",
+    "stars": 0,
+    "rating": 0,
+    "reviews": 0,
+    "price": 0,
+    "type": "apart",
+    "amenities": [],
+    "image": "images/sutochno-10.jpg",
+    "bookingUrl": "https://sutochno.ru/front/searchapp/detail/2383264",
+    "website": "",
+    "sources": [
+      "sutochno"
+    ]
+  }
+]
