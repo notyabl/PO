@@ -250,6 +250,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .filters {
   position: sticky;
   top: 88px;
+  max-height: calc(100vh - 104px);
+  max-height: calc(100dvh - 104px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terracotta) var(--surface-2);
   padding: 22px;
   background: #fff;
   border: 1px solid var(--line);
@@ -700,7 +706,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 @media (max-width: 980px) {
   .layout { grid-template-columns: 1fr; padding-top: 0; }
-  .filters { position: static; }
+  .filters { position: static; max-height: none; overflow: visible; }
 }
 
 @media (max-width: 860px) {

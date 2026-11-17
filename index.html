@@ -27,7 +27,7 @@
     <div class="container">
       <span class="hero__badge">🔥 Отели и апартаменты — в одном поиске</span>
       <h1>Найдите отель, в который<br />захочется <em>вернуться</em></h1>
-      <p>Сравниваем предложения Ostrovok и Суточно.ру. Бронирование — на сайте источника, без комиссий Dingo.</p>
+      <p>Отели и апартаменты Островка, 101Hotels и Суточно.ру. Бронирование — на сайте источника, без комиссий Dingo.</p>
 
       <form class="search" id="searchForm" autocomplete="off">
         <div class="search__field">
@@ -40,15 +40,18 @@
             <option value="Сочи"></option>
             <option value="Ялта"></option>
             <option value="Калининград"></option>
+            <option value="Краснодар"></option>
+            <option value="Волгоград"></option>
+            <option value="Ростов-на-Дону"></option>
           </datalist>
         </div>
         <div class="search__field">
           <label for="checkin">Заезд</label>
-          <input type="date" id="checkin" />
+          <input type="date" id="checkin" required />
         </div>
         <div class="search__field">
           <label for="checkout">Выезд</label>
-          <input type="date" id="checkout" />
+          <input type="date" id="checkout" required />
         </div>
         <div class="search__field">
           <label for="guests">Гости</label>
@@ -73,7 +76,7 @@
       </div>
 
       <div class="filter">
-        <h3>Цена за ночь</h3>
+        <h3>Цена в каталоге за ночь</h3>
         <input class="range" type="range" id="priceRange" min="1000" max="30000" step="500" value="30000" />
         <div class="range-labels">
           <span>1 000 ₽</span>
@@ -108,6 +111,13 @@
       </div>
 
       <div class="filter">
+        <h3>Источник</h3>
+        <label class="check"><input type="checkbox" data-source="ostrovok" /><span>Островок</span></label>
+        <label class="check"><input type="checkbox" data-source="hotels101" /><span>101Hotels</span></label>
+        <label class="check"><input type="checkbox" data-source="sutochno" /><span>Суточно.ру</span></label>
+      </div>
+
+      <div class="filter">
         <h3>Тип размещения</h3>
         <label class="check"><input type="checkbox" data-type="hotel" /><span>Отель</span></label>
         <label class="check"><input type="checkbox" data-type="apart" /><span>Апартаменты</span></label>
@@ -118,18 +128,18 @@
 
     <section class="results" id="results">
       <div class="results__head">
-        <div class="results__count" id="resultsCount">Загрузка…</div>
+        <div class="results__count" id="resultsCount" aria-live="polite">Загрузка…</div>
         <div class="sort">
           <select id="sort">
             <option value="popular">Сначала популярные</option>
-            <option value="price-asc">Сначала дешёвые</option>
-            <option value="price-desc">Сначала дорогие</option>
+            <option value="price-asc">Сначала дешевле по каталогу</option>
+            <option value="price-desc">Сначала дороже по каталогу</option>
             <option value="rating">По рейтингу</option>
           </select>
         </div>
       </div>
 
-      <p class="disclaimer">
+      <p class="disclaimer" id="sourceStatus" role="status" aria-live="polite">
         Dingo — метапоисковик. Мы не принимаем оплату и не оформляем брони:
         по кнопке «Забронировать» вы переходите на Ostrovok или Суточно.ру и завершаете бронирование там.
       </p>
@@ -177,6 +187,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
